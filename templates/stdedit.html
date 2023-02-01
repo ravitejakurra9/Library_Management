@@ -1,0 +1,43 @@
+{% extends 'stdnavbar.html' %}
+{% block content %}
+<table border="2px" align="center">
+  <h3 > Edit Student Profile</h3>
+<form method="post">
+    {% csrf_token %}
+<table class="table" align="center">
+    <tr>
+        <td>Name</td>
+        <td>:</td>
+        <td><input type="text" name="txtname" value="{{std.Student_Name}}"></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>:</td>
+        <td><input type="text" name="txtpwd" value="{{std.Student_Password}}"></td>
+    </tr>
+        <tr>
+        <td>Mobile No</td>
+        <td>:</td>
+        <td><input type="text" name="txtmobile" value="{{std.Student_PhoneNo}}"></td>
+    </tr>
+    </tr>
+    <tr>
+        <td>Course</td>
+        <td>:</td>
+        <td><input type="text" name="txtsem" value="{{std.Course}}" disabled></td>
+    </tr>
+    </tr>
+        <tr>
+        <td>Sem</td>
+        <td>:</td>
+        <td><input type="text" name="txtcourse" value="{{std.Student_Sem}}" disabled></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><input type="submit" value="Update" ></td>
+    </tr>
+
+</table>
+    </form>
+{% endblock %}
